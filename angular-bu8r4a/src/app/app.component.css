@@ -1,0 +1,8 @@
+p {
+  font-family: Lato;
+}
+
+li:empty:after {
+    color: grey;
+    content: "Enter text here...";
+}

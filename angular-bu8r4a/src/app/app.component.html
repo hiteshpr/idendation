@@ -1,0 +1,38 @@
+      <header>
+        <div class="row">
+          <div>
+            <i class="fa fa-arrow-left"></i>   
+          </div>
+          <div class="pull-right">
+            <i class="fa fa-arrows-alt"></i>&nbsp;
+           <i class="fa fa-ellipsis-v"></i>
+         </div>
+        </div>
+      </header>
+      
+      <div class="container">
+        <h6> Today | {{now |  date:"hh:mm a"}}</h6>
+        
+        <div class="user-text">
+          <div contenteditable >
+            <ul contenteditable="true" id="userlist">
+              <li (click)="eleClicked($event)"></li>
+              <div *ngFor="let n of numbers">
+                <hr *ngIf="clicked">
+              <li *ngIf="clicked" (click)="eleClicked($event)"></li>
+              </div>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="row">
+          <button class="btn-btn-success" (click)="leftAlign()"><i class="fa fa-arrow-circle-o-left"></i></button>
+          <button class="btn-btn-success" (click)="leftAlign()"><i class="fa fa-arrow-circle-o-right"></i></button>
+          <button class="btn-btn-success pull-right" (click)="formatDoc()"><i class="fa fa-bars"></i></button>
+          
+        </div>
+      </footer>
